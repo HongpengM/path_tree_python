@@ -1,4 +1,11 @@
-from node import Node
+'''
+Description: 
+Author: Kevin
+Date: 2022-11-02 20:01:27
+Github: no way to find
+LastEditTime: 2022-11-02 20:11:49
+'''
+from .node import Node
 
 def main():
     a = Node('test')
