@@ -1,0 +1,36 @@
+* `path_tree_python` Library
+
+
+  
+** Introduction
+
+   path_tree_python is a python library that resolves filepath and url
+   into tree struture.
+
+   
+** Requirements
+
+   pathlib, urllib
+
+   
+** Usage
+
+
+   Examples 
+   #+begin_src python
+     from path_tree_python import PTree
+     tree = PTree()
+     PTree.add('http://www.test.org/index.html')
+     PTree.print()
+   #+end_src
+
+
+   'www.test.org'--'index.html'
+
+   #+begin_src python
+     PTree.add('http://www.test.org/test/index.html')
+     PTree.print()
+   #+end_src
+
+   'www.test.org'-----'index.html'
+                   |__'test'_____'index.html'
