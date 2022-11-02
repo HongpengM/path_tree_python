@@ -15,22 +15,81 @@
    
 ** Usage
 
-
    Examples 
    #+begin_src python
+     # Add a node
      from path_tree_python import PTree
      tree = PTree()
-     PTree.add('http://www.test.org/index.html')
-     PTree.print()
+     tree.add('http://www.test.org/index.html')
+     tree.print()
+
+     # ----------------------------
+     # 'www.test.org'--'index.html'
+     # ----------------------------
+
    #+end_src
-
-
-   'www.test.org'--'index.html'
 
    #+begin_src python
-     PTree.add('http://www.test.org/test/index.html')
-     PTree.print()
+     # Add a node & prints
+     tree.add('http://www.test.org/test/index.html')
+     tree.print()
+
+    # ----------------------------
+    # 'www.test.org'-----'index.html'
+    #                 |__'test'_____'index.html'
+
    #+end_src
 
-   'www.test.org'-----'index.html'
-                   |__'test'_____'index.html'
+
+   #+begin_src python
+     
+     # Convert leaf to df sheet
+     tree.to_df()
+
+     # --------------------------------------------
+     # |      root      |   depth 1  |   depth 2  |
+     # |----------------|------------|------------|
+     # |  wwww.test.org |    test    | index.html |
+     # |----------------|------------|------------|
+     # |  wwww.test.org | index.html |            |
+     # --------------------------------------------
+   #+end_src
+
+   #+begin_src python
+     # Show tree statistics
+     tree.stats_df(depth=1, func='count')
+
+     # --------------------------------------------
+     # |      root      |   depth 1  |   count    |
+     # |----------------|------------|------------|
+     # |  wwww.test.org |    test    |     1      |
+     # |----------------|------------|------------|
+     # |  wwww.test.org | index.html |     1      |
+     # --------------------------------------------
+   #+end_src
+
+   #+begin_src python
+     # Accept other data types
+     tree = PTree(path_attr=lambda x: x['path'])
+     tree.add({'path':'www.test.org/hello.html', 'description':'hello page'})
+     tree.stats_df(depth=1, func='count')
+
+     # --------------------------------------------
+     # |      root      |   depth 1  |   count    |
+     # |----------------|------------|------------|
+     # |  wwww.test.org | hello.html |     1      |
+     # --------------------------------------------
+   #+end_src
+
+   #+begin_src python
+     # Accessing the node
+     tree = PTree(path_func=lambda x: x['path'])
+     tree.add({'path':'www.test.org/hello.html', 'description':'hello page'})
+     tree.stats_df(depth=1, func='count')
+
+     # --------------------------------------------
+     # |      root      |   depth 1  |   count    |
+     # |----------------|------------|------------|
+     # |  wwww.test.org | hello.html |     1      |
+     # --------------------------------------------
+   #+end_src
