@@ -1,13 +1,12 @@
 Metadata-Version: 2.1
 Name: ptree
 Version: 0.1.0
-Summary: A small example package
+Summary: Tree Structure helps URL and path analysis
 Home-page: https://github.com/HongpengM/path_tree_python
 Author: Hong
 Author-email: Hong <hpmaatthu@gmail.com>
 Project-URL: Homepage, https://github.com/HongpengM/path_tree_python
 Project-URL: Bug Tracker, https://github.com/HongpengM/path_tree_python/issues
-Keywords: path tree,data structure
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent

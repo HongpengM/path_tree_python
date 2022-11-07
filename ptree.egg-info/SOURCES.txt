@@ -11,6 +11,10 @@ ptree/__init__.py
 ptree/node.py
 ptree/path_tree.py
 ptree/test.py
+ptree.egg-info/PKG-INFO
+ptree.egg-info/SOURCES.txt
+ptree.egg-info/dependency_links.txt
+ptree.egg-info/top_level.txt
 ptree/ptree.egg-info/PKG-INFO
 ptree/ptree.egg-info/SOURCES.txt
 ptree/ptree.egg-info/dependency_links.txt
