@@ -2,7 +2,10 @@
 README.md
 Readme.org
 setup.py
+setup.sh
 test_module.sh
+.vscode/settings.json
+dist/path_tree_python-1.0.0.tar.gz
 path_tree/__init__.py
 path_tree/node.py
 path_tree/path_tree.py

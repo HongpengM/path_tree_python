@@ -4,7 +4,7 @@ Version: 1.0.0
 Summary: A sample Python project
 Author: Kevin
 Author-email: author@example.com
-Keywords: sample,setuptools,development
+Keywords: path tree,data structure
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
 Classifier: Topic :: Software Development :: Build Tools
@@ -16,5 +16,3 @@ Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3 :: Only
 Requires-Python: >=3.7, <4
-Provides-Extra: dev
-Provides-Extra: test
