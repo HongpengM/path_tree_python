@@ -1,10 +1,3 @@
-'''
-Description: 
-Author: Kevin
-Date: 2022-11-02 20:01:27
-Github: no way to find
-LastEditTime: 2022-11-07 09:12:29
-'''
 from functools import reduce
 from collections import namedtuple, deque
 import pandas as pd
